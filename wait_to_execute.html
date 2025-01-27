@@ -1,0 +1,25 @@
+<button id="help-button">Get Help</button>
+
+<script>
+document.getElementById('help-button').addEventListener('click', function() {
+    helpjuice_account_url = 'https://help.ilab.agilent.com'; 
+    helpjuice_contact_us_url = 'https://help.ilab.agilent.com/contact-us'; 
+    helpjuiceSwiftyConfig = { 
+        subdomain: 'ilab',
+        widgetPosition: 'bottomRight', 
+        themeColor: '#00a2df', 
+        linksColor: '#00a2df', 
+        chatHeader: 'iLab Virtual Agent', 
+        chatWelcomeHeader: 'Ask Anything To The iLab Digital Assistant', 
+        chatWelcomeMessage: 'Need answers? Let us guide you with a wide range of helpful articles and suggested questions', 
+        chatInputPlaceholder: 'What do you need help with today?', 
+        chatIconUrl: '', 
+        chatNoResultsMessage: 'Sorry, we couldn\'t find any results. Please contact our team for further assistance.' 
+    }; 
+
+    // Dynamically load the swifty_chat.js script
+    var script = document.createElement('script');
+    script.src = 'https://help.ilab.agilent.com/swifty_chat.js';
+    document.body.appendChild(script);
+});
+</script>
